@@ -29,7 +29,7 @@ class DiscoverHeaderCell: UITableViewCell {
         vw.backgroundColor = .white
         vw.layer.cornerRadius = 20
         vw.layer.shadowColor = UIColor.black.cgColor
-        vw.layer.shadowOpacity = 0.2
+        vw.layer.shadowOpacity = 0.1
         vw.layer.shadowRadius = 15
         vw.layer.shadowOffset = CGSize(width: 0, height: 2)
         return vw
@@ -41,9 +41,18 @@ class DiscoverHeaderCell: UITableViewCell {
         return img
     }()
     
+    private let paddingView: UIView = {
+        let vw = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 20))
+        return vw
+    }()
+    
+    private let rightPaddingView: UIView = {
+        let vw = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
+        return vw
+    }()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         setupCell()
 
     }
@@ -51,28 +60,39 @@ class DiscoverHeaderCell: UITableViewCell {
     func setupCell() {
         subtitleLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         
-        searchBar.layer.cornerRadius = 15
-        searchBar.clipsToBounds = true
-        
-       
-        
-        let paddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 20))
-        let rightPaddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
-        searchBar.leftView = paddingView
-        searchBar.rightView = rightPaddingView
-    
         paddingView.addSubview(searchIcon)
+        rightPaddingView.addSubview(settingContainer)
+        settingContainer.addSubview(settingIcon)
+        
+        rightPaddingViewSetup()
+        searchIconSetup()
+        settingIconSetup()
+        settingContainerSetup()
+        searchBarSetup()
+    }
+    
+    func rightPaddingViewSetup() {
+        rightPaddingView.translatesAutoresizingMaskIntoConstraints = false
+        rightPaddingView.widthAnchor.constraint(equalToConstant: 60).isActive = true
+    }
+    
+    func searchIconSetup() {
         searchIcon.translatesAutoresizingMaskIntoConstraints = false
         searchIcon.centerYAnchor.constraint(equalTo: paddingView.centerYAnchor).isActive = true
         searchIcon.leadingAnchor.constraint(equalTo: paddingView.leadingAnchor, constant: 10).isActive = true
         searchIcon.trailingAnchor.constraint(equalTo: paddingView.trailingAnchor, constant: -5).isActive = true
-        
-        
-        rightPaddingView.addSubview(settingContainer)
-        settingContainer.addSubview(settingIcon)
-        
-        rightPaddingView.translatesAutoresizingMaskIntoConstraints = false
-        rightPaddingView.widthAnchor.constraint(equalToConstant: 60).isActive = true
+
+    }
+    
+    func settingIconSetup() {
+        settingIcon.translatesAutoresizingMaskIntoConstraints = false
+        settingIcon.centerYAnchor.constraint(equalTo: settingContainer.centerYAnchor).isActive = true
+        settingIcon.centerXAnchor.constraint(equalTo: settingContainer.centerXAnchor).isActive = true
+        settingIcon.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        settingIcon.heightAnchor.constraint(equalToConstant: 20).isActive = true
+    }
+    
+    func settingContainerSetup() {
         
         settingContainer.translatesAutoresizingMaskIntoConstraints = false
         settingContainer.topAnchor.constraint(equalTo: rightPaddingView.topAnchor).isActive = true
@@ -80,27 +100,20 @@ class DiscoverHeaderCell: UITableViewCell {
         settingContainer.centerXAnchor.constraint(equalTo: rightPaddingView.centerXAnchor).isActive = true
         settingContainer.widthAnchor.constraint(equalToConstant: 40).isActive = true
         settingContainer.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
-        settingIcon.translatesAutoresizingMaskIntoConstraints = false
-        settingIcon.centerYAnchor.constraint(equalTo: settingContainer.centerYAnchor).isActive = true
-        settingIcon.centerXAnchor.constraint(equalTo: settingContainer.centerXAnchor).isActive = true
-        settingIcon.widthAnchor.constraint(equalToConstant: 20).isActive = true
-        settingIcon.heightAnchor.constraint(equalToConstant: 20).isActive = true
-
-        
-
+    }
+    
+    func searchBarSetup() {
+        searchBar.layer.cornerRadius = 25
+        searchBar.clipsToBounds = true
+        searchBar.font = UIFont.systemFont(ofSize: 16, weight: .light)
+       
+        searchBar.leftView = paddingView
         searchBar.leftViewMode = UITextField.ViewMode.always
         searchBar.leftViewMode = .always
         
+        searchBar.rightView = rightPaddingView
         searchBar.rightViewMode = UITextField.ViewMode.always
         searchBar.rightViewMode = .always
-        
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

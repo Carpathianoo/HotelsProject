@@ -11,7 +11,6 @@ protocol moveToDetailPageDelegate {
     func moveToHotelDetailPage(model: HotelModel)
 }
 
-
 class HotelsNearbyController: UIViewController {
 
     @IBOutlet weak var tableView : UITableView!
@@ -39,6 +38,7 @@ class HotelsNearbyController: UIViewController {
     
     
 }
+
 extension HotelsNearbyController: UITableViewDelegate, UITableViewDataSource {
     
     
@@ -50,12 +50,10 @@ extension HotelsNearbyController: UITableViewDelegate, UITableViewDataSource {
         default:
             return dataHotel.count
         }
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-
         switch indexPath.section {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleHotelsCell.identifier, for: indexPath) as? TitleHotelsCell else {
@@ -81,7 +79,7 @@ extension HotelsNearbyController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+
         if indexPath.section == 1 {
             self.delegate?.moveToHotelDetailPage(model: dataHotel[indexPath.row])
         }

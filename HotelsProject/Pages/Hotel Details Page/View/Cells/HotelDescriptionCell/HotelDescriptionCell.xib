@@ -16,14 +16,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="246"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Hotel Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8U-jQ-wvR">
-                        <rect key="frame" x="16" y="18" width="122" height="27.666666666666671"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Hotel Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8U-jQ-wvR">
+                        <rect key="frame" x="16" y="18" width="288" height="28.666666666666671"/>
                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label aw daw dawbdawbuidhaw dawuidawiudhiawhwiaudhiuawhdiahwdiawhdiawhdihawidhawdiuawhdiawduhiaw" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F00-lq-7A4">
-                        <rect key="frame" x="16" y="58" width="288" height="168"/>
+                        <rect key="frame" x="16" y="59" width="288" height="167"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -31,6 +31,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="A8U-jQ-wvR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="8MG-q5-Fo7"/>
+                    <constraint firstAttribute="trailing" secondItem="A8U-jQ-wvR" secondAttribute="trailing" constant="16" id="FfA-eI-hgt"/>
                     <constraint firstAttribute="bottom" secondItem="F00-lq-7A4" secondAttribute="bottom" constant="20" id="JmO-h8-BQQ"/>
                     <constraint firstItem="F00-lq-7A4" firstAttribute="top" secondItem="A8U-jQ-wvR" secondAttribute="bottom" constant="12.300000000000001" id="TXG-Xa-BsO"/>
                     <constraint firstItem="F00-lq-7A4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="cml-B2-s93"/>

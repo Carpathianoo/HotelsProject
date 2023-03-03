@@ -10,9 +10,7 @@ import UIKit
 class TopHotelTableCell: UITableViewCell {
 
     static let identifier = "TopHotelTableCell"
-    
     var dataTopHotel: [HotelModel] = []
-    
     var moveToDetailPageDelegate: moveToDetailPageDelegate?
     
     private var collectionView: UICollectionView = {
@@ -21,7 +19,6 @@ class TopHotelTableCell: UITableViewCell {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(UINib(nibName: "TopHotelCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: TopHotelCollectionViewCell.identifier)
         collectionView.layer.masksToBounds = false
-//        collectionView.backgroundColor = .green
 
         return collectionView
         

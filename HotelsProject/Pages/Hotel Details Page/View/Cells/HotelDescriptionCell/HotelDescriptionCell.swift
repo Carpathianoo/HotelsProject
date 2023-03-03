@@ -25,8 +25,6 @@ class HotelDescriptionCell: UITableViewCell {
     func setupCell() {
         hotelName.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         hotelDesc.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-    
-        
     }
     
     func configure(model: HotelModel?) {

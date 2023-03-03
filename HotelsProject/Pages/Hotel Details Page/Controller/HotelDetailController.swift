@@ -64,7 +64,6 @@ extension HotelDetailController: UITableViewDelegate, UITableViewDataSource {
         case .imageSection:
             guard let cell = hotelDetailTable.dequeueReusableCell(withIdentifier: HotelDetailImageCell.identifier, for: indexPath) as? HotelDetailImageCell else { return UITableViewCell() }
             
-            cell.setupCell()
             guard let configDetail = hotelDetail else { return UITableViewCell() }
             cell.configure(model: configDetail)
             return cell

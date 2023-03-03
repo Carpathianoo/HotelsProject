@@ -14,8 +14,6 @@ class TitleHotelsCell: UITableViewCell {
     
     static let identifier = "TitleHotelsCell"
     
-   
-    
     override func awakeFromNib() {
         super.awakeFromNib()
        setupCell()
@@ -23,8 +21,6 @@ class TitleHotelsCell: UITableViewCell {
 
     func setupCell() {
         titleHotels.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        
-        
     }
     
 }

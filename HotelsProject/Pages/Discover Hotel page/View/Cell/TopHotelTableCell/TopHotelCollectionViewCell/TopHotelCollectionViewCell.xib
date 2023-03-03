@@ -27,7 +27,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnf-RE-77t">
-                                <rect key="frame" x="20.999999999999996" y="118.33333333333333" width="39.666666666666657" height="19.333333333333329"/>
+                                <rect key="frame" x="21" y="118.33333333333333" width="162" height="19.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -56,6 +56,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gnf-RE-77t" firstAttribute="leading" secondItem="IZh-Mi-znR" secondAttribute="leading" constant="21" id="2uU-ac-fck"/>
+                            <constraint firstAttribute="trailing" secondItem="gnf-RE-77t" secondAttribute="trailing" constant="80" id="3bb-wz-nKu"/>
                             <constraint firstAttribute="bottom" secondItem="oR7-K9-Na9" secondAttribute="bottom" constant="21" id="DVU-XP-MJ3"/>
                             <constraint firstItem="SmF-fv-jHH" firstAttribute="leading" secondItem="IZh-Mi-znR" secondAttribute="leading" constant="21" id="GIf-sg-tqV"/>
                             <constraint firstAttribute="bottom" secondItem="SmF-fv-jHH" secondAttribute="bottom" constant="21" id="OTb-ag-R06"/>

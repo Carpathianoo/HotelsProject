@@ -32,15 +32,12 @@ class HotelsNearbyHeaderCell: UITableViewCell {
     func setupCell() {
         headerTitle.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         showAllButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .light)
-        
-        
     }
     
 
     @IBAction func tapShowAllButton(_ sender: Any) {
         print("button clicked")
         self.delegate?.moveToHotelsNearbyPage()
-        
     }
     
 }

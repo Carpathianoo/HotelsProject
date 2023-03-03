@@ -25,7 +25,7 @@ class TopHotelCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         let tintView = UIView()
         tintView.backgroundColor = UIColor(white: 0, alpha: 0.5)
-        tintView.frame = CGRect(x: 0, y: 0, width: hotelImage.frame.width, height: 190)
+        tintView.frame = CGRect(x: 0, y: 0, width: 2000, height: 190)
         hotelImage.addSubview(tintView)
     }
     

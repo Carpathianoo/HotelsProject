@@ -24,8 +24,8 @@
                             <constraint firstAttribute="height" constant="101" id="UT0-tF-ULL"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel kita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnn-64-thv">
-                        <rect key="frame" x="125" y="37" width="69" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Hotel kita uiashxiashx isah xashx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnn-64-thv">
+                        <rect key="frame" x="125" y="37" width="129" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -58,6 +58,7 @@
                     </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="h2P-rp-9m9" firstAttribute="leading" secondItem="bnn-64-thv" secondAttribute="trailing" constant="10" id="0ft-at-wBf"/>
                     <constraint firstAttribute="trailing" secondItem="h2P-rp-9m9" secondAttribute="trailing" constant="16" id="1l9-IF-lfd"/>
                     <constraint firstItem="vr5-Se-OzK" firstAttribute="top" secondItem="h2P-rp-9m9" secondAttribute="bottom" constant="3" id="51x-uz-u7l"/>
                     <constraint firstItem="vr5-Se-OzK" firstAttribute="top" secondItem="h2P-rp-9m9" secondAttribute="bottom" constant="3" id="5Wh-y8-wfk"/>

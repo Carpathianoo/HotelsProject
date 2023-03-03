@@ -16,13 +16,8 @@ class HotelDetailImageCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        setupCell()
     }
 
-    func setupCell() {
-        
-    }
-    
     func configure(model: HotelModel) {
         hotelImage.image = UIImage(named: model.image)
     }

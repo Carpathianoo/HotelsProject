@@ -47,7 +47,4 @@ class HotelsNearbyListCell: UITableViewCell {
         hotelRating.text = "\(model.rating)"
         hotelImage.image = UIImage(named: model.image)
     }
-    
-    
-    
 }

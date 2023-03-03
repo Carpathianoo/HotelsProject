@@ -15,9 +15,6 @@ class HotelsNearbyList: UITableViewCell {
     @IBOutlet weak var hotelPrice: UILabel!
     @IBOutlet weak var hotelRating: UILabel!
     
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,8 +33,4 @@ class HotelsNearbyList: UITableViewCell {
         hotelImage.layer.cornerRadius = 15
         
     }
-    
-    
-    
-    
 }
