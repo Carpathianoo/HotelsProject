@@ -18,11 +18,12 @@ class HotelDetailController: UIViewController {
 
     @IBOutlet weak var hotelDetailTable: UITableView!
     
-    var hotelDetail: [HotelModel]?
+    var hotelDetail: HotelModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
+        
     }
 
     func setupTable() {
@@ -64,25 +65,26 @@ extension HotelDetailController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = hotelDetailTable.dequeueReusableCell(withIdentifier: HotelDetailImageCell.identifier, for: indexPath) as? HotelDetailImageCell else { return UITableViewCell() }
             
             cell.setupCell()
-            guard let configDetail = hotelDetail?[indexPath.row] else { return UITableViewCell() }
+            guard let configDetail = hotelDetail else { return UITableViewCell() }
             cell.configure(model: configDetail)
             return cell
 
         case .desc:
             guard let cell = hotelDetailTable.dequeueReusableCell(withIdentifier: HotelDescriptionCell.identifier, for: indexPath) as? HotelDescriptionCell else { return UITableViewCell() }
             
-            cell.configure(model: hotelDetail?[indexPath.row])
+            cell.configure(model: hotelDetail)
             
             return cell
         
         case .room:
             guard let cell = hotelDetailTable.dequeueReusableCell(withIdentifier: RoomListTableViewCell.identifier, for: indexPath) as? RoomListTableViewCell else {
                 return UITableViewCell()}
-            guard let roomData = hotelDetail?[indexPath.row].room else {
+            
+            guard let roomData = hotelDetail?.room else {
                 return UITableViewCell()
             }
             
-            cell.dataRoom = roomData
+            cell.roomData = roomData
             cell.setupTableCell()
             return cell
 

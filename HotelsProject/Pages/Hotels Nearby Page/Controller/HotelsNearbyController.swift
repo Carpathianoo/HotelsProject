@@ -7,9 +7,16 @@
 
 import UIKit
 
+protocol moveToDetailPageDelegate {
+    func moveToHotelDetailPage(model: HotelModel)
+}
+
+
 class HotelsNearbyController: UIViewController {
 
     @IBOutlet weak var tableView : UITableView!
+    
+    var delegate: moveToDetailPageDelegate?
     
     var dataHotel: [HotelModel] = []
     
@@ -29,6 +36,7 @@ class HotelsNearbyController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
     
 }
 extension HotelsNearbyController: UITableViewDelegate, UITableViewDataSource {
@@ -60,6 +68,7 @@ extension HotelsNearbyController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HotelsNearbyListCell.identifier, for: indexPath) as? HotelsNearbyListCell else {
                 return UITableViewCell()
             }
+            
             cell.configure(model: dataHotel[indexPath.row])
             return cell
         default:
@@ -70,4 +79,12 @@ extension HotelsNearbyController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         2
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.section == 1 {
+            self.delegate?.moveToHotelDetailPage(model: dataHotel[indexPath.row])
+        }
+    }
 }
+

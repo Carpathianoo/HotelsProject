@@ -11,7 +11,8 @@ class RoomListTableViewCell: UITableViewCell {
     
     static let identifier = "RoomListTableViewCell"
     
-    var dataRoom: [Room] = []
+    var roomImages: [HotelModel] = []
+    var roomData: [Room] = []
     
     private var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -40,6 +41,7 @@ class RoomListTableViewCell: UITableViewCell {
     func setupTableCell() {
         contentView.addSubview(collectionView)
         collectionViewSetup()
+        self.selectionStyle = .none
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -49,7 +51,7 @@ class RoomListTableViewCell: UITableViewCell {
 
 extension RoomListTableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return roomData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -58,6 +60,7 @@ extension RoomListTableViewCell: UICollectionViewDataSource, UICollectionViewDel
         }
         
         cell.setupCell()
+        cell.configure(roomModel: roomData[indexPath.row])
         return cell
     }
     
@@ -68,4 +71,5 @@ extension RoomListTableViewCell: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width / 1.5, height: 120)
     }
+    
 }

@@ -13,6 +13,8 @@ class TopHotelTableCell: UITableViewCell {
     
     var dataTopHotel: [HotelModel] = []
     
+    var moveToDetailPageDelegate: moveToDetailPageDelegate?
+    
     private var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -39,22 +41,12 @@ class TopHotelTableCell: UITableViewCell {
     func setupTableCell() {
         contentView.addSubview(collectionView)
         collectionViewSetup()
+        self.selectionStyle = .none
         
         collectionView.delegate = self
         collectionView.dataSource = self
     }
 
-
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-//        contentView.addSubview(collectionView)
-        
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
-    }
 }
 
 extension TopHotelTableCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -77,6 +69,10 @@ extension TopHotelTableCell: UICollectionViewDataSource, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width / 1.5, height: 190)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.moveToDetailPageDelegate?.moveToHotelDetailPage(model: dataTopHotel[indexPath.row])
     }
     
 }

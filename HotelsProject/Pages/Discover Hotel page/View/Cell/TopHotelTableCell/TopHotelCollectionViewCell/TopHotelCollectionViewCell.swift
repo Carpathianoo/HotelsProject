@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class TopHotelCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "TopHotelCollectionViewCell"

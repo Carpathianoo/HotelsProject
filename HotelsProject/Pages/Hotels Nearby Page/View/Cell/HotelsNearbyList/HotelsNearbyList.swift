@@ -10,15 +10,9 @@ import UIKit
 class HotelsNearbyList: UITableViewCell {
     
     @IBOutlet weak var hotelImage: UIImageView!
-    
     @IBOutlet weak var hotelName: UILabel!
-    
     @IBOutlet weak var hotelAddress: UILabel!
-    
-    
     @IBOutlet weak var hotelPrice: UILabel!
-    
-    
     @IBOutlet weak var hotelRating: UILabel!
     
     
@@ -42,5 +36,8 @@ class HotelsNearbyList: UITableViewCell {
         hotelImage.layer.cornerRadius = 15
         
     }
+    
+    
+    
     
 }
