@@ -11,6 +11,8 @@ class RoomListCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "RoomListCollectionViewCell"
 
+    @IBOutlet weak var backView: UIView!
+    
     @IBOutlet weak var roomImage: UIImageView!
     
     @IBOutlet weak var titleRoom: UILabel!
@@ -29,6 +31,20 @@ class RoomListCollectionViewCell: UICollectionViewCell {
         self.contentView.layer.borderWidth = 1.0
         self.contentView.layer.borderColor = UIColor.clear.cgColor
         self.contentView.layer.masksToBounds = true
+        
+        roomImage.layer.cornerRadius = 10
+        
+        backgroundColor = .clear // very important
+        backgroundColor = .clear // very important
+        backView.layer.masksToBounds = true
+        backView.layer.shadowOpacity = 0.3
+        backView.layer.shadowRadius = 4
+        backView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        backView.layer.shadowColor = UIColor.black.cgColor
+
+        titleRoom.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        
+        
     }
     
     func configure(roomModel: Room) {

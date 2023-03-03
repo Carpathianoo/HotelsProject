@@ -20,40 +20,47 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qY-V7-v4k">
                         <rect key="frame" x="0.0" y="0.0" width="288" height="111"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TUh-DJ-sEo">
+                                <rect key="frame" x="12" y="12" width="98" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afY-Yz-85Z">
-                                <rect key="frame" x="123" y="49" width="63" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="123" y="47.333333333333336" width="155" height="14.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotel1" translatesAutoresizingMaskIntoConstraints="NO" id="QrH-dV-CEP">
-                                <rect key="frame" x="16" y="16" width="94" height="79"/>
+                                <rect key="frame" x="12" y="12" width="98" height="87"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnG-dL-EXi">
-                                <rect key="frame" x="123" y="26" width="33" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="123" y="26" width="155" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="Stars" translatesAutoresizingMaskIntoConstraints="NO" id="fNV-0G-m3S">
-                                <rect key="frame" x="123" y="72" width="89" height="24"/>
+                                <rect key="frame" x="123" y="63.666666666666657" width="89" height="32.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="07g-lv-5lz"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QrH-dV-CEP" firstAttribute="top" secondItem="2qY-V7-v4k" secondAttribute="top" constant="16" id="BbT-fO-1jT"/>
+                            <constraint firstAttribute="trailing" secondItem="afY-Yz-85Z" secondAttribute="trailing" constant="10" id="APc-Rt-wGY"/>
+                            <constraint firstItem="QrH-dV-CEP" firstAttribute="top" secondItem="2qY-V7-v4k" secondAttribute="top" constant="12" id="BbT-fO-1jT"/>
                             <constraint firstAttribute="bottom" secondItem="fNV-0G-m3S" secondAttribute="bottom" constant="15" id="Je5-iX-SAg"/>
                             <constraint firstItem="afY-Yz-85Z" firstAttribute="top" secondItem="dnG-dL-EXi" secondAttribute="bottom" constant="2" id="KMe-k0-bXg"/>
                             <constraint firstItem="dnG-dL-EXi" firstAttribute="leading" secondItem="QrH-dV-CEP" secondAttribute="trailing" constant="13" id="LCg-Eq-QQR"/>
+                            <constraint firstAttribute="trailing" secondItem="dnG-dL-EXi" secondAttribute="trailing" constant="10" id="SmL-is-wIA"/>
                             <constraint firstAttribute="trailing" secondItem="fNV-0G-m3S" secondAttribute="trailing" constant="76" id="aiI-aF-hkv"/>
                             <constraint firstItem="afY-Yz-85Z" firstAttribute="leading" secondItem="QrH-dV-CEP" secondAttribute="trailing" constant="13" id="ep3-Kc-Kgc"/>
-                            <constraint firstItem="QrH-dV-CEP" firstAttribute="leading" secondItem="2qY-V7-v4k" secondAttribute="leading" constant="16" id="fie-Zi-j07"/>
+                            <constraint firstItem="QrH-dV-CEP" firstAttribute="leading" secondItem="2qY-V7-v4k" secondAttribute="leading" constant="12" id="fie-Zi-j07"/>
                             <constraint firstItem="fNV-0G-m3S" firstAttribute="top" secondItem="afY-Yz-85Z" secondAttribute="bottom" constant="2" id="ite-7F-QNu"/>
                             <constraint firstItem="fNV-0G-m3S" firstAttribute="leading" secondItem="QrH-dV-CEP" secondAttribute="trailing" constant="13" id="jKN-Ow-h67"/>
-                            <constraint firstAttribute="bottom" secondItem="QrH-dV-CEP" secondAttribute="bottom" constant="16" id="vwo-e7-rN2"/>
+                            <constraint firstAttribute="bottom" secondItem="QrH-dV-CEP" secondAttribute="bottom" constant="12" id="vwo-e7-rN2"/>
                             <constraint firstItem="dnG-dL-EXi" firstAttribute="top" secondItem="2qY-V7-v4k" secondAttribute="top" constant="26" id="wfr-G1-pwR"/>
                         </constraints>
                     </view>
@@ -68,6 +75,7 @@
             </constraints>
             <size key="customSize" width="288" height="111"/>
             <connections>
+                <outlet property="backView" destination="TUh-DJ-sEo" id="aa1-AY-Bt8"/>
                 <outlet property="descRoom" destination="afY-Yz-85Z" id="uoc-G3-NVt"/>
                 <outlet property="ratingIcons" destination="fNV-0G-m3S" id="Xe7-Sh-qPd"/>
                 <outlet property="roomImage" destination="QrH-dV-CEP" id="K7v-NT-f5y"/>
@@ -79,6 +87,9 @@
     <resources>
         <image name="Stars" width="52" height="11"/>
         <image name="hotel1" width="544" height="304"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

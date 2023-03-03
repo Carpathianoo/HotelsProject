@@ -34,6 +34,8 @@ class TopHotelCollectionViewCell: UICollectionViewCell {
         self.contentView.layer.borderWidth = 1.0
         self.contentView.layer.borderColor = UIColor.clear.cgColor
         self.contentView.layer.masksToBounds = true
+        
+        hotelName.font = UIFont.systemFont(ofSize: 16, weight: .bold)
 
     }
     

@@ -91,7 +91,7 @@ extension DiscoverHotelController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return discoverTable.rowHeight
         case 1:
-            return 210
+            return 170
         case 2:
             return discoverTable.rowHeight
         case 3:
