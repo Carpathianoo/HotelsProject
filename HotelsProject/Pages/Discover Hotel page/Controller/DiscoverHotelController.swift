@@ -24,6 +24,7 @@ class DiscoverHotelController: UIViewController, HotelsNearbyDelegate, moveToDet
     @IBOutlet weak var discoverTable: UITableView!
 
     var hotelData: [HotelModel] = []
+    var sortedTopHotels: [HotelModel] = []
     
     var delegate: HotelsNearbyDelegate?
     var nearbyPageDelegate: moveToDetailPageDelegate?
@@ -45,8 +46,14 @@ class DiscoverHotelController: UIViewController, HotelsNearbyDelegate, moveToDet
 
         discoverTable.delegate = self
         discoverTable.dataSource = self
+    
         seeder()
+        sortTopHotel()
         
+    }
+    
+    func sortTopHotel() {
+        sortedTopHotels = hotelData.sorted {$0.rating > $1.rating}
     }
     
     func moveToHotelsNearbyPage() {
@@ -109,7 +116,7 @@ extension DiscoverHotelController: UITableViewDelegate, UITableViewDataSource {
             
         case .topHotels:
             guard let cell = discoverTable.dequeueReusableCell(withIdentifier: TopHotelTableCell.identifier) as? TopHotelTableCell else { return UITableViewCell() }
-            cell.dataTopHotel = hotelData
+            cell.dataTopHotel = sortedTopHotels
             cell.moveToDetailPageDelegate = self.delegate as? any moveToDetailPageDelegate
             cell.setupTableCell()
             
